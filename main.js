@@ -23,10 +23,10 @@ function readThreeDigtis(number, hasScale = false) {
         result += 'linh ';
     }
 
-    if (units === 5 && tens > 0) {
-        result += 'lăm';
-    } else if (tens > 0 && units === 1) {
+    if (units === 1 && tens > 1) {
         result += 'mốt';
+    } else if (units === 5 && tens > 0) {
+        result += 'lăm';
     } else if (units > 0) {
         result += unitTexts[units];
     }
@@ -70,7 +70,7 @@ function readNumber(number) {
 }
 
 console.log(readNumber(0));
-console.log(readNumber(10));
+console.log(readNumber(11));
 console.log(readNumber(15));
 console.log(readNumber(150));
 console.log(readNumber(102));
